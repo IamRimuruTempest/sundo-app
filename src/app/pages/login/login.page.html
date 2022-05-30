@@ -1,0 +1,34 @@
+<ion-content class="ion-padding">
+  <div class="center">
+    <div class="img">
+      <img src="../../assets/sundologo.png" alt="" />
+    </div>
+    <h3>LOGIN</h3>
+    <p>Login to continue!</p>
+    <form
+      [formGroup]="validationForm_Group"
+      (ngSubmit)="onSubmit(validationForm_Group.value)"
+      novalidate
+    >
+      <ion-label>Email</ion-label>
+      <ion-item>
+        <ion-input formControlName="email">
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-label>Password</ion-label>
+      <ion-item>
+        <ion-input type="password" formControlName="password">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <a slot="end" href="">Forgot Password?</a>
+      </ion-item>
+
+      <ion-button class="login_button" type="submit" expand="block">
+        Login
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

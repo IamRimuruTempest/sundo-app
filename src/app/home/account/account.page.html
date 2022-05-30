@@ -1,0 +1,84 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>account</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+  <div class="account">
+    <div>
+      <img [src]="account.img" alt="" />
+      <div class="account__cam">
+        <ion-icon name="camera-reverse"></ion-icon>
+      </div>
+    </div>
+    <h4>{{account.firstName}} {{account.lastName}}</h4>
+    <p>{{account.email}}</p>
+  </div>
+  <ion-list class="ion-no-padding">
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="call-outline"></ion-icon>
+      <ion-label position="fixed">Phone</ion-label>
+      <ion-label slot="end">{{account.phone}}</ion-label>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="location-outline"></ion-icon>
+      <ion-label position="fixed">Address</ion-label>
+      <ion-label slot="end">{{account.address}}</ion-label>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-label position="fixed">Password</ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="help-circle-outline"></ion-icon>
+      <ion-label>Help Centre</ion-label>
+      <ion-icon
+        slot="end"
+        class="arrow__icon"
+        name="chevron-forward-outline"
+      ></ion-icon>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="hand-left-outline"></ion-icon>
+      <ion-label>Community Rules</ion-label>
+      <ion-icon
+        slot="end"
+        class="arrow__icon"
+        name="chevron-forward-outline"
+      ></ion-icon>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="headset-outline"></ion-icon>
+      <ion-label>Sundo Policies</ion-label>
+      <ion-icon
+        slot="end"
+        class="arrow__icon"
+        name="chevron-forward-outline"
+      ></ion-icon>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="play-circle-outline"></ion-icon>
+      <ion-label>About</ion-label>
+      <ion-icon
+        slot="end"
+        class="arrow__icon"
+        name="chevron-forward-outline"
+      ></ion-icon>
+    </ion-item>
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon name="log-out-outline"></ion-icon>
+      <ion-label>Logout</ion-label>
+      <ion-icon
+        slot="end"
+        class="arrow__icon"
+        name="chevron-forward-outline"
+        (click)="presentAlertConfirm()"
+      ></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

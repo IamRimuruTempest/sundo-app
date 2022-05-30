@@ -1,0 +1,80 @@
+* {
+  font-family: "Poppins" !important;
+}
+
+// ion-content {
+//   --background: #4065fc;
+// }
+
+.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    color: #4065fc;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: rgb(138, 138, 138);
+  }
+
+  a {
+    text-decoration: none;
+    float: right;
+    color: rgb(138, 138, 138);
+  }
+
+  ion-button {
+    --background: #4065fc;
+    font-size: 1.3rem;
+    height: 3.5rem;
+  }
+}
+
+.img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  img {
+    width: auto;
+    height: 100px;
+    color: rgb(138, 138, 138);
+  }
+}
+
+ion-item {
+  --padding-start: 0 !important;
+  --inner-padding-end: 0 !important;
+  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+ion-label {
+  font-size: 1.2rem;
+}
+
+ion-input {
+  border: rgb(138, 138, 138) solid 2px;
+  border-radius: 5px;
+  height: 3.5rem;
+  font-size: 1.2rem;
+
+  ion-icon {
+    width: 25px;
+    height: 25px;
+    padding: 0.5rem;
+  }
+}

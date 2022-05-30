@@ -1,0 +1,47 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/home/hero"
+        [text]="buttonText"
+        [icon]="buttonIcon"
+      >
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h5 class="app__greetings">Good Morning,</h5>
+  <h3>Jobert Adviento</h3>
+
+  <div class="card">
+    <img src="../../assets/person.png" alt="" />
+    <div class="card__content">
+      <h1>SUNDO</h1>
+      <p>
+        Et molestiae minus ut dolores <br />
+        dolore nam culpa nulla sed <br />
+        molestiae sunt qui enim <br />
+        omnis!
+      </p>
+    </div>
+  </div>
+
+  <div class="location">
+    <h4>{{stations.station}}</h4>
+    <p>{{stations.location}}</p>
+  </div>
+  <div class="stations">
+    <ion-list>
+      <ion-item class="ion-no-padding" *ngFor="let bat of battery">
+        <ion-label>
+          <h5>{{bat.battery}}</h5>
+        </ion-label>
+        <ion-label slot="end"
+          ><h5 class="battery__label">{{bat.status}}</h5></ion-label
+        >
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h5 class="app__greetings">{{greet}},</h5>
+  <h3>{{account.firstName}} {{account.lastName}}</h3>
+
+  <div class="card">
+    <img src="../../assets/person.png" alt="" />
+    <div class="card__content">
+      <h1>SUNDO</h1>
+      <p>
+        Et molestiae minus ut dolores <br />
+        dolore nam culpa nulla sed <br />
+        molestiae sunt qui enim <br />
+        omnis!
+      </p>
+    </div>
+  </div>
+
+  <h4>Stations</h4>
+  <div class="stations">
+    <ion-list *ngFor="let station of stations">
+      <ion-item
+        class="ion-no-padding"
+        routerLink="/home/battery/{{station.id}}"
+      >
+        <ion-label>
+          <div class="app__station">
+            <h5>{{station.station}}</h5>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+          <p>{{station.location}}</p></ion-label
+        >
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
